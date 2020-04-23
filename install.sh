@@ -17,10 +17,10 @@ cp ./spacewall.jpg ~/Pictures/spacewall.jpg
 
 #Installing Key Packages
 echo "Installing Key Packages"
-pacman -Syyu
-pacman -S plasma-meta dolphin konsole latte-dock 
-pacman -S i3-gaps i3blocks i3lock i3status kitty rofi zsh
-pacman -S chromium firefox code atom vi vim neovim vifm openvpn arandr xrandr
+sudo pacman -Syyu
+sudo pacman -S plasma-meta dolphin konsole latte-dock 
+sudo pacman -S i3-gaps i3blocks i3lock i3status kitty rofi zsh
+sudo pacman -S chromium firefox code atom vi vim neovim vifm openvpn arandr xrandr
 
 #Configure Themes
 echo "Configuring Themes"
@@ -61,7 +61,7 @@ cd ~
 #BlackArch Tools
 echo "Installing BlackArch Repos"
 curl -O https://blackarch.org/strap.sh
-chmod +x strap.sh
+sudo chmod +x strap.sh
 ./strap.sh
 pacman -Syy
 
@@ -79,7 +79,7 @@ pip install .
 #Enable SDDM
 echo "Enabling SDDM"
 
-systemctl enable sddm
+sudo systemctl enable sddm
 
 echo "DONE"
 echo "-Starting SuperTal3-OS-"
