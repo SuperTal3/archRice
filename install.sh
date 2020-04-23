@@ -20,7 +20,7 @@ echo "Installing Key Packages"
 pacman -Syyu
 pacman -S plasma-meta dolphin konsole latte-dock 
 pacman -S i3-gaps i3blocks i3lock i3status kitty rofi zsh
-pacman -S chromium firefox code atom vi vim neovim vifm openvpn
+pacman -S chromium firefox code atom vi vim neovim vifm openvpn arandr xrandr
 
 #Configure Themes
 echo "Configuring Themes"
@@ -33,6 +33,7 @@ git clone https://github.com/dracula/rofi
 cd ./rofi
 cp ./config.rasi ~/.config/rofi
 cd ~
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 #Install Trizen
 echo "Installing Trizen"
